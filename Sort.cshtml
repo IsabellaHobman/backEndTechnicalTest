@@ -1,0 +1,52 @@
+﻿@model WebApplication1.Models.Data
+
+@{
+    ViewData["Title"] = "Sort";
+}
+
+<h1>Sort</h1>
+
+<div>
+    <h4>Data</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Response)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Response)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.isAscending)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.isAscending)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SortedResponse)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SortedResponse)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SortList)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SortList)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TimeTaken)
+        </dt>
+        <dd class="col-sm-10">
+            <h1>
+                it took
+                @Html.DisplayFor(model => model.TimeTaken)
+                seconds to finish the sort.
+            </h1>
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>
